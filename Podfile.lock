@@ -1,12 +1,26 @@
 PODS:
-  - SwiftLint (0.23.0)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - IQKeyboardManagerSwift (5.0.4)
+  - MBProgressHUD (1.0.0)
+  - ReachabilitySwift (3)
+  - SwiftLint (0.23.1)
 
 DEPENDENCIES:
+  - FMDB
+  - IQKeyboardManagerSwift
+  - MBProgressHUD
+  - ReachabilitySwift (~> 3)
   - SwiftLint
 
 SPEC CHECKSUMS:
-  SwiftLint: 6ddf7d305644c2239cb768a11d97cce804816691
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
 
-PODFILE CHECKSUM: 79a5efaf3f6dd0d14bda909319a5556ad1ca66d9
+PODFILE CHECKSUM: 22badd601776523d4dd5e23d7482f82c4aa5aa91
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

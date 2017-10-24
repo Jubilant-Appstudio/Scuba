@@ -10,6 +10,12 @@
 		032176141F9E4E38007E1F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032176131F9E4E38007E1F5B /* AppDelegate.swift */; };
 		0321761B1F9E4E38007E1F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0321761A1F9E4E38007E1F5B /* Assets.xcassets */; };
 		0321762F1F9E5775007E1F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321762C1F9E4F13007E1F5B /* ViewController.swift */; };
+		032176361F9E5F18007E1F5B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032176351F9E5F0A007E1F5B /* DatabaseManager.swift */; };
+		032176391F9E5F52007E1F5B /* APIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032176371F9E5F51007E1F5B /* APIList.swift */; };
+		0321763A1F9E5F52007E1F5B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032176381F9E5F52007E1F5B /* APIManager.swift */; };
+		0321763E1F9E5F7A007E1F5B /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321763B1F9E5F79007E1F5B /* CommonMethods.swift */; };
+		0321763F1F9E5F7A007E1F5B /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321763C1F9E5F79007E1F5B /* Shared.swift */; };
+		032176401F9E5F7A007E1F5B /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321763D1F9E5F7A007E1F5B /* AlertMessages.swift */; };
 		226AB01E2AB9F8C3B557BE18 /* Pods_ScubaCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375A94061B868CE38A6E07E7 /* Pods_ScubaCalendar.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +27,13 @@
 		032176281F9E4F13007E1F5B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		032176291F9E4F13007E1F5B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0321762C1F9E4F13007E1F5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		032176301F9E5E69007E1F5B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		032176351F9E5F0A007E1F5B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		032176371F9E5F51007E1F5B /* APIList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIList.swift; sourceTree = "<group>"; };
+		032176381F9E5F52007E1F5B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0321763B1F9E5F79007E1F5B /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
+		0321763C1F9E5F79007E1F5B /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		0321763D1F9E5F7A007E1F5B /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
 		14478221F756466ADA0AF05B /* Pods-ScubaCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScubaCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScubaCalendar/Pods-ScubaCalendar.release.xcconfig"; sourceTree = "<group>"; };
 		375A94061B868CE38A6E07E7 /* Pods_ScubaCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScubaCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B655432C28170EE7CAEFB12 /* Pods-ScubaCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScubaCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScubaCalendar/Pods-ScubaCalendar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -41,6 +54,7 @@
 		032176071F9E4E38007E1F5B = {
 			isa = PBXGroup;
 			children = (
+				032176301F9E5E69007E1F5B /* .swiftlint.yml */,
 				032176121F9E4E38007E1F5B /* ScubaCalendar */,
 				032176111F9E4E38007E1F5B /* Products */,
 				9325E5DFFA0ACB36431ADEDA /* Pods */,
@@ -75,6 +89,8 @@
 		032176251F9E4F13007E1F5B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				032176331F9E5EDD007E1F5B /* DBManager */,
+				032176341F9E5EDD007E1F5B /* Webservice */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -113,8 +129,44 @@
 		0321762D1F9E4F13007E1F5B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				032176311F9E5ED2007E1F5B /* Font */,
+				032176321F9E5ED2007E1F5B /* Shared */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		032176311F9E5ED2007E1F5B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		032176321F9E5ED2007E1F5B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0321763D1F9E5F7A007E1F5B /* AlertMessages.swift */,
+				0321763B1F9E5F79007E1F5B /* CommonMethods.swift */,
+				0321763C1F9E5F79007E1F5B /* Shared.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		032176331F9E5EDD007E1F5B /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				032176351F9E5F0A007E1F5B /* DatabaseManager.swift */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		032176341F9E5EDD007E1F5B /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				032176371F9E5F51007E1F5B /* APIList.swift */,
+				032176381F9E5F52007E1F5B /* APIManager.swift */,
+			);
+			path = Webservice;
 			sourceTree = "<group>";
 		};
 		9325E5DFFA0ACB36431ADEDA /* Pods */ = {
@@ -238,13 +290,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScubaCalendar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B721E17AC0480B675423499B /* [CP] Embed Pods Frameworks */ = {
@@ -253,9 +308,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ScubaCalendar/Pods-ScubaCalendar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -269,6 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0321763E1F9E5F7A007E1F5B /* CommonMethods.swift in Sources */,
+				0321763F1F9E5F7A007E1F5B /* Shared.swift in Sources */,
+				032176401F9E5F7A007E1F5B /* AlertMessages.swift in Sources */,
+				032176391F9E5F52007E1F5B /* APIList.swift in Sources */,
+				0321763A1F9E5F52007E1F5B /* APIManager.swift in Sources */,
+				032176361F9E5F18007E1F5B /* DatabaseManager.swift in Sources */,
 				0321762F1F9E5775007E1F5B /* ViewController.swift in Sources */,
 				032176141F9E4E38007E1F5B /* AppDelegate.swift in Sources */,
 			);

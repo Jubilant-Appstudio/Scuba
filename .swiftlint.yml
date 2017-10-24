@@ -1,0 +1,12 @@
+# implicitly
+function_parameter_count: 10
+cyclomatic_complexity: 20
+file_length: 600
+function_body_length: 200
+type_body_length: 400
+disabled_rules: # rule identifiers to exclude from running
+- line_length
+- trailing_whitespace
+- force_try
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+- Pods
