@@ -1,0 +1,824 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/AppDelegate.swift",
+      "line": 12,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/AppDelegate.swift",
+      "line": 16,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/AppDelegate.swift",
+      "line": 21,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/AppDelegate.swift",
+      "line": 26,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/AppDelegate.swift",
+      "line": 31,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/AppDelegate.swift",
+      "line": 35,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/AppDelegate.swift",
+      "line": 39,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Controller/ViewController.swift",
+      "line": 11,
+      "symbol": "ViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Controller/ViewController.swift",
+      "line": 13,
+      "symbol": "ViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Controller/ViewController.swift",
+      "line": 18,
+      "symbol": "ViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 11,
+      "symbol": "AlertMessages",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 15,
+      "symbol": "AlertMessages.strAlertNetworkUnavailable",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 16,
+      "symbol": "AlertMessages.strErrorAlert",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 19,
+      "symbol": "AlertMessages.strQuoteLike",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 23,
+      "symbol": "AlertMessages.strIsUserFirstTime",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 24,
+      "symbol": "AlertMessages.strIsGetNotification",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 25,
+      "symbol": "AlertMessages.strTempCompare",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 28,
+      "symbol": "AlertMessages.strIsUserLogin",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 31,
+      "symbol": "AlertMessages.strAlertUsrName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 32,
+      "symbol": "AlertMessages.strAlertNotAuthUsr",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 35,
+      "symbol": "AlertMessages.strUsrdefaultUser_ID",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 36,
+      "symbol": "AlertMessages.strUsrdefaultUser_Email",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 37,
+      "symbol": "AlertMessages.strUsrdefaultUser_Name",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 38,
+      "symbol": "AlertMessages.strUsrdefaultUser_Notification_option",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 39,
+      "symbol": "AlertMessages.strUsrdefaultUser_Social_ID",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 40,
+      "symbol": "AlertMessages.strUsrdefaultUser_Social_Type",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 41,
+      "symbol": "AlertMessages.strUsrdefaultUser_Purchase",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 42,
+      "symbol": "AlertMessages.strUsrdefaultUser_Purchase_key",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 43,
+      "symbol": "AlertMessages.strUsrdefaultNotification_Img_URL",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 44,
+      "symbol": "AlertMessages.strUsrdefaultNotification_Redirect_URL",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 47,
+      "symbol": "AlertMessages.strGoogleSignInError",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 48,
+      "symbol": "AlertMessages.strFacebookSignInError",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 49,
+      "symbol": "AlertMessages.strTwitterSignInError",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 52,
+      "symbol": "AlertMessages.strNoUserIDError",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 53,
+      "symbol": "AlertMessages.strNoUserNameError",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 55,
+      "symbol": "AlertMessages.strNoQuoteFoundError",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/AlertMessages.swift",
+      "line": 58,
+      "symbol": "AlertMessages.strlogoutMsg",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 12,
+      "symbol": "CommonMethods",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 14,
+      "symbol": "CommonMethods.hud",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 15,
+      "symbol": "CommonMethods.navControl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 16,
+      "symbol": "CommonMethods.alert",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 17,
+      "symbol": "CommonMethods.sharedObj",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 19,
+      "symbol": "CommonMethods.navigateTo(_:inNavigationViewController:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 50,
+      "symbol": "CommonMethods.findViewControllerRefInStack(_:inNavigationViewController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 72,
+      "symbol": "CommonMethods.ShowAlert(_:Description:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 85,
+      "symbol": "CommonMethods.dismissAlertView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 91,
+      "symbol": "CommonMethods.setUpNavigationBar(_:navItem:title:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 101,
+      "symbol": "CommonMethods.setSpacing(getString:getLinespacing:getCharacterspace:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 114,
+      "symbol": "CommonMethods.showNotificationAlert(getViewController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 128,
+      "symbol": "CommonMethods.getTopViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 148,
+      "symbol": "CommonMethods.showMBProgressHudView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 156,
+      "symbol": "CommonMethods.showPercentageMBProgressHudView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 166,
+      "symbol": "CommonMethods.hideMBProgressHud()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 174,
+      "symbol": "CommonMethods.convertDateFormat(fullDate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/CommonMethods.swift",
+      "line": 193,
+      "symbol": "CommonMethods.setCounterValue(getCount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": null,
+      "symbol": "Shared",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 14,
+      "symbol": "Shared",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 16,
+      "symbol": "Shared.sharedInstanceObj",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 18,
+      "symbol": "Shared.reachability",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 19,
+      "symbol": "Shared.isReachable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 20,
+      "symbol": "Shared.strDeviceToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 21,
+      "symbol": "Shared.strUserId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 22,
+      "symbol": "Shared.strFBID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 23,
+      "symbol": "Shared.strGOOGLEID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 24,
+      "symbol": "Shared.strTWTRID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 25,
+      "symbol": "Shared.isNotificationOn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 26,
+      "symbol": "Shared.databaseObj",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 28,
+      "symbol": "Shared.hud",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 56,
+      "symbol": "Shared.sharedInstance",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 71,
+      "symbol": "Shared.reachabilityChanged(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 99,
+      "symbol": "Shared.userLikesandBackup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 112,
+      "symbol": "Shared.userBackup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 177,
+      "symbol": "Shared.fetchUserLikeCount()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Resource/Shared/Shared.swift",
+      "line": 213,
+      "symbol": "Shared.updateUserLikeInDB(getLikes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 12,
+      "symbol": "DatabaseManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 16,
+      "symbol": "DatabaseManager.setDatabasePath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 17,
+      "symbol": "DatabaseManager.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 23,
+      "symbol": "DatabaseManager.getPath(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 31,
+      "symbol": "DatabaseManager.copyFile(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 53,
+      "symbol": "DatabaseManager.openDatabase()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 66,
+      "symbol": "DatabaseManager.fetchRecord(whereCondition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 107,
+      "symbol": "DatabaseManager.insertData(getData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 127,
+      "symbol": "DatabaseManager.updateData(whereCondition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/DBManager/DatabaseManager.swift",
+      "line": 144,
+      "symbol": "DatabaseManager.deleteData(whereCondition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 11,
+      "symbol": "APIList",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 13,
+      "symbol": "APIList.empId",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 14,
+      "symbol": "APIList.isAuthenticated",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 15,
+      "symbol": "APIList.iOSDeviceToken",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 17,
+      "symbol": "APIList.strQuoteUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 18,
+      "symbol": "APIList.strUserUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 19,
+      "symbol": "APIList.strTips",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 20,
+      "symbol": "APIList.strNotification",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 23,
+      "symbol": "APIList.strGetAllQuote",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 26,
+      "symbol": "APIList.strLikeCount",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 29,
+      "symbol": "APIList.strShareCount",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 32,
+      "symbol": "APIList.strSendQuote",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 35,
+      "symbol": "APIList.strUserLogin",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 38,
+      "symbol": "APIList.strUserLike",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 41,
+      "symbol": "APIList.strUserBackup",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 44,
+      "symbol": "APIList.strNotificationOn",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIList.swift",
+      "line": 47,
+      "symbol": "APIList.strNotificationOff",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": null,
+      "symbol": "APIManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 13,
+      "symbol": "APIManagerDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 24,
+      "symbol": "APIManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 26,
+      "symbol": "APIManager.apiIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 27,
+      "symbol": "APIManager.strFileName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 28,
+      "symbol": "APIManager.downloadStatus",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 29,
+      "symbol": "APIManager.session",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 35,
+      "symbol": "APIManager.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 37,
+      "symbol": "APIManager.requestForURL(strUrl:httpMethod:parameters:includeHeader:apiIdentifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 165,
+      "symbol": "APIManager.requestForFileDownload(strUrl:apiIdentifier:fileName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 175,
+      "symbol": "APIManager.checkForValidResponse(responseDict:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 186,
+      "symbol": "APIManager.urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 198,
+      "symbol": "APIManager.urlSession(_:downloadTask:didResumeAtOffset:expectedTotalBytes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 201,
+      "symbol": "APIManager.urlSession(_:task:didCompleteWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar/ScubaCalendar/Utility/Webservice/APIManager.swift",
+      "line": 210,
+      "symbol": "APIManager.urlSession(_:downloadTask:didFinishDownloadingTo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Mahipalsinh/Desktop/Scuba/ScubaCalendar"
+}
