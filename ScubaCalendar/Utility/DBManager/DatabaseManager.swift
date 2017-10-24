@@ -14,6 +14,7 @@ class DatabaseManager: NSObject {
     private let dbFileName = "Quote.sqlite"
     private var database = FMDatabase()
     var setDatabasePath = String()
+    
     override init() {
         super.init()
         
@@ -68,7 +69,6 @@ class DatabaseManager: NSObject {
         
       //  self.copyFile(dbFileName as NSString)
         database = FMDatabase(path: setDatabasePath as String)
-        
         if openDatabase() {
             
             if whereCondition == "" {

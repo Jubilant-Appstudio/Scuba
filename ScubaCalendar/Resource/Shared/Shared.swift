@@ -17,40 +17,25 @@ class Shared: NSObject {
     
     var reachability: Reachability?
     var isReachable: Bool?
-    var strDeviceToken: String
-    var strUserId: String
-    var strFBID: String
-    var strGOOGLEID: String
-    var strTWTRID: String
-    var isNotificationOn: Bool = false
     let databaseObj = DatabaseManager()
     
     static var hud: MBProgressHUD = MBProgressHUD()
     
     fileprivate override init() {
         
-        self.strDeviceToken = ""
-        self.strUserId = ""
-        self.strFBID = ""
-        self.strGOOGLEID = ""
-        self.strTWTRID = ""
-        
         super.init()
         
         //Reachability
         do {
-            
             reachability = Reachability.init()
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged(_:)), name: ReachabilityChangedNotification, object: reachability)
-        
         do {
             try reachability!.startNotifier()
         } catch {
             
         }
-        
     }
     
     class var sharedInstance: Shared {

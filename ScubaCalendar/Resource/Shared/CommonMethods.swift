@@ -13,7 +13,7 @@ class CommonMethods: NSObject {
     
     static var hud: MBProgressHUD = MBProgressHUD()
     static var  navControl: UINavigationController?
-    static var alert: UIAlertView?
+    static var alert: UIAlertController?
     static var sharedObj: Shared?
     
     class func navigateTo(_ destinationVC: UIViewController, inNavigationViewController navigationController: UINavigationController, animated: Bool ) {
@@ -81,55 +81,17 @@ class CommonMethods: NSObject {
         }
         
         DispatchQueue.main.async {
-            alert = UIAlertView(title: title as String, message: message as String, delegate: nil, cancelButtonTitle: "Okay")
-            alert!.show()
+        //    alert = UIAlertView(title: title as String, message: message as String, delegate: nil, cancelButtonTitle: "Okay")
+         //   alert!.show()
+            
+            alert = UIAlertController(title: title as String, message: message as String, preferredStyle: .alert)
+            getTopViewController().present(alert!, animated: true, completion: nil)
         }
     }
     
     class func dismissAlertView() {
         
-        alert?.dismiss(withClickedButtonIndex: 0, animated: true)
-    }
-    
-    // MARK: - Navigation elements
-    class func setUpNavigationBar(_ navControl: UINavigationController, navItem: UINavigationItem, title: String) {
-        
-        //navControl.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        //navControl.navigationBar.shadowImage = UIImage()
-        
-        navControl.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Roboto-Regular", size: 17)!, NSAttributedStringKey.foregroundColor: UIColor.white]
-        navItem.title = title
-        navControl.navigationBar.tintColor = UIColor.white
-    }
-    
-    class func setSpacing(getString: String, getLinespacing: CGFloat, getCharacterspace: CGFloat ) -> NSAttributedString {
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        
-        paragraphStyle.lineSpacing = getLinespacing
-        
-        let attrString = NSMutableAttributedString(string: getString)
-       // attrString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
-        let range = NSMakeRange(0, attrString.length)
-        attrString.addAttributes([NSAttributedStringKey.paragraphStyle: paragraphStyle], range: range)
-        attrString.addAttribute(NSAttributedStringKey.kern, value: getCharacterspace, range: NSRange(location: 0, length: getString.characters.count))
-        
-        return attrString
-    }
-    
-    class func showNotificationAlert(getViewController: UIViewController) {
-        
-        /*
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-
-        let popup : PreOrderVC = mainStoryboard.instantiateViewController(withIdentifier: "PreOrderVC") as! PreOrderVC
-        let navigationController = UINavigationController(rootViewController: popup)
-        
-        navigationController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        navigationController.setNavigationBarHidden(true, animated: false)
-        
-        getViewController.present(navigationController, animated: true, completion: nil)
-        */
+        alert?.dismiss(animated: true, completion: nil)
     }
     
     class func getTopViewController() -> UIViewController {
@@ -167,7 +129,6 @@ class CommonMethods: NSObject {
             self.hud = MBProgressHUD.showAdded(to: view, animated: true)
             hud.mode = .determinateHorizontalBar
         })
-        
     }
     
     class func hideMBProgressHud() {
@@ -196,21 +157,4 @@ class CommonMethods: NSObject {
         }
         
     }
-    
-    class func setCounterValue(getCount: Int) -> String {
-        
-        var setCounterValue = ""
-        
-        if getCount <= 99 {
-            setCounterValue = String(getCount)
-        } else if getCount <= 9999 {
-            print("\(Int(getCount/1000)) M")
-            setCounterValue = "\(Int(getCount/1000)) M"
-        } else if getCount <= 99999 {
-            setCounterValue = "\(Int(getCount/10000)) M"
-        }
-        
-        return setCounterValue
-    }
-    
 }
