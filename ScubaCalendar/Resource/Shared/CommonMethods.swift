@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import SkyFloatingLabelTextField
 
 class CommonMethods: NSObject {
     
@@ -15,6 +16,10 @@ class CommonMethods: NSObject {
     static var  navControl: UINavigationController?
     static var alert: UIAlertController?
     static var sharedObj: Shared?
+    
+    static var setTextColor = UIColor.white
+    static var setLineColor = UIColor.white
+    static var setTopPlaceHolderColor = UIColor(red: 63/255.0, green: 81/255.0, blue: 114/255.0, alpha: 1.0)
     
     class func navigateTo(_ destinationVC: UIViewController, inNavigationViewController navigationController: UINavigationController, animated: Bool ) {
         
@@ -85,6 +90,9 @@ class CommonMethods: NSObject {
          //   alert!.show()
             
             alert = UIAlertController(title: title as String, message: message as String, preferredStyle: .alert)
+           
+            alert?.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+
             getTopViewController().present(alert!, animated: true, completion: nil)
         }
     }
@@ -157,4 +165,27 @@ class CommonMethods: NSObject {
         }
         
     }
+
+    class func setCommonLayer(getButton: UIButton) -> UIButton {
+ 
+        getButton.layer.borderColor = UIColor.white.cgColor
+        getButton.layer.borderWidth = 0.5
+        getButton.layer.cornerRadius = 5.0
+        
+        return getButton
+    }
+    
+    class func setCommonTextfield(getTextfield: SkyFloatingLabelTextField) -> SkyFloatingLabelTextField {
+       
+        getTextfield.textColor = CommonMethods.setTextColor
+        getTextfield.selectedLineColor = CommonMethods.setLineColor
+        
+        getTextfield.placeholderColor = CommonMethods.setTopPlaceHolderColor
+        getTextfield.titleColor = CommonMethods.setTopPlaceHolderColor
+        getTextfield.lineColor = CommonMethods.setTopPlaceHolderColor
+        getTextfield.selectedTitleColor = CommonMethods.setTopPlaceHolderColor
+        
+        return getTextfield
+    }
+    
 }

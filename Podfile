@@ -8,4 +8,6 @@ target 'ScubaCalendar' do
     pod 'ReachabilitySwift', '~> 3'
     pod 'MBProgressHUD'
     pod 'FMDB'
+    pod 'SkyFloatingLabelTextField', '~> 3.0'
+    pod 'SwifterSwift'
 end

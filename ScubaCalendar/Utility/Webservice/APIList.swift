@@ -10,9 +10,9 @@ import UIKit
 
 class APIList: NSObject {
 
-    static let strQuoteUrl = "http://quoteapp.codzgarage.com/api/quotes/"
+    static let strUserUrl = "http://scuba.codzgarage.com/api/user/"
     
-    //Get all quote
-    static let strGetAllQuote =  strQuoteUrl + "get_all"
+    //User Login
+    static let strUserLogin =  strUserUrl + "login"
     
 }

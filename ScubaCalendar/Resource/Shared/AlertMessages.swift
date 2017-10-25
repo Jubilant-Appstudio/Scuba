@@ -14,4 +14,8 @@ class AlertMessages: NSObject {
     static let strAlertNetworkUnavailable = "Please check your internet connection and try again."
     static let strErrorAlert = "Something went wrong please try again later."
   
+    // LoginVC
+    static let strInvalidEmail = "Please enter valid email"
+    static let strInvalidPWD = "Please enter Password"
+    
 }
