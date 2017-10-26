@@ -11,8 +11,10 @@ import Foundation
 import ReachabilitySwift
 import MBProgressHUD
 
+
+
 class Shared: NSObject {
-    
+        
     static let sharedInstanceObj = sharedInstance
     
     var reachability: Reachability?

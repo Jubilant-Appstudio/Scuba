@@ -12,6 +12,21 @@ import SkyFloatingLabelTextField
 
 class CommonMethods: NSObject {
     
+    struct SetFont {
+        static let MontserratSemiBold = UIFont(name: "Montserrat-SemiBold", size: 15.0)
+        static let MontserratMedium = UIFont(name: "Montserrat-Medium", size: 15.0)
+        static let MontserratBold = UIFont(name: "Montserrat-Bold", size: 15.0)
+        static let RalewayRegular = UIFont(name: "Raleway-Regular", size: 15.0)
+        
+    }
+    
+    struct SetFontSize {
+        static let S10 = 10.0
+        static let S15 = 15.0
+        static let S17 = 17.0
+        static let S20 = 20.0
+    }
+    
     static var hud: MBProgressHUD = MBProgressHUD()
     static var  navControl: UINavigationController?
     static var alert: UIAlertController?
@@ -168,7 +183,7 @@ class CommonMethods: NSObject {
 
     class func setCommonLayer(getButton: UIButton) -> UIButton {
  
-        getButton.layer.borderColor = UIColor.white.cgColor
+        getButton.layer.borderColor = UIColor.darkGray.cgColor
         getButton.layer.borderWidth = 0.5
         getButton.layer.cornerRadius = 5.0
         

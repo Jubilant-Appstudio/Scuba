@@ -8,6 +8,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Splash-->
         <scene sceneID="tne-QT-ifu">
@@ -92,7 +100,7 @@
                                                         <rect key="frame" x="30" y="25" width="315" height="48"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
                                                         <state key="normal" title="LOG IN WITH FACEBOOK" image="f_icon" backgroundImage="tabbar_background">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weL-8K-68P">
@@ -116,27 +124,29 @@
                                                 <rect key="frame" x="0.0" y="333" width="375" height="150"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jon@doe.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNp-6G-zwn" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                        <rect key="frame" x="30" y="10" width="315" height="39"/>
+                                                        <rect key="frame" x="30" y="10" width="315" height="42.5"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="asd" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vs1-XG-X8I" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                        <rect key="frame" x="30" y="59" width="315" height="39.5"/>
+                                                        <rect key="frame" x="30" y="62.5" width="315" height="39"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37r-kk-b5I">
-                                                        <rect key="frame" x="30" y="98.5" width="315" height="27"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <state key="normal" title="Forgot Password?"/>
+                                                        <rect key="frame" x="30" y="101.5" width="315" height="32"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                                        <state key="normal" title="Forgot Password?">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,15 +229,18 @@
                     </view>
                     <connections>
                         <outlet property="btnFacebook" destination="MBl-DD-qaA" id="wXP-Ah-FKy"/>
+                        <outlet property="btnForgotPwd" destination="37r-kk-b5I" id="HEi-fR-d8F"/>
                         <outlet property="btnGoogle" destination="weL-8K-68P" id="qdM-6B-CAd"/>
                         <outlet property="btnGuest" destination="pgF-me-pjk" id="Jfh-b9-De7"/>
+                        <outlet property="btnLogin" destination="Rbu-26-df0" id="NwN-k3-1lB"/>
+                        <outlet property="btnSignUP" destination="dxh-56-1AQ" id="wR3-BF-wIY"/>
                         <outlet property="txtLogin" destination="kNp-6G-zwn" id="xtn-ch-z5Q"/>
                         <outlet property="txtPassword" destination="vs1-XG-X8I" id="Nwc-xK-8oG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrL-NX-jMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="81.409295352323838"/>
+            <point key="canvasLocation" x="1188" y="-137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fN4-2Q-HyI">

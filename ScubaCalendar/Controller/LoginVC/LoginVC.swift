@@ -11,7 +11,7 @@ import SkyFloatingLabelTextField
 import SwifterSwift
 
 class LoginVC: UIViewController {
-
+    
     // MARK: - Variable Declare
     var userModelObj: UserData?
     var sharedObj: Shared?
@@ -25,12 +25,15 @@ class LoginVC: UIViewController {
     @IBOutlet weak var btnGuest: UIButton!
     @IBOutlet weak var btnFacebook: UIButton!
     @IBOutlet weak var btnGoogle: UIButton!
+    @IBOutlet weak var btnForgotPwd: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnSignUP: UIButton!
     
     // MARK: - View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -42,13 +45,25 @@ class LoginVC: UIViewController {
         
         sharedObj = Shared.sharedInstance
         
+        
         // set common layer
         btnGuest = CommonMethods.setCommonLayer(getButton: btnGuest)
         btnFacebook = CommonMethods.setCommonLayer(getButton: btnFacebook)
         btnGoogle = CommonMethods.setCommonLayer(getButton: btnGoogle)
         txtLogin = CommonMethods.setCommonTextfield(getTextfield: txtLogin)
         txtPassword = CommonMethods.setCommonTextfield(getTextfield: txtPassword)
+       
+        // set font & font size
+        btnFacebook.titleLabel?.font =  CommonMethods.SetFont.MontserratMedium?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
+        btnGoogle.titleLabel?.font =  CommonMethods.SetFont.MontserratMedium?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
+        txtLogin.font = CommonMethods.SetFont.RalewayRegular?.withSize(CGFloat(CommonMethods.SetFontSize.S17))
+        txtPassword.font = CommonMethods.SetFont.RalewayRegular?.withSize(CGFloat(CommonMethods.SetFontSize.S17))
+        btnForgotPwd.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S10))
+        btnLogin.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
+        btnGuest.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
+        btnSignUP.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
         
+       
     }
     
     // MARK: - Login Validation
