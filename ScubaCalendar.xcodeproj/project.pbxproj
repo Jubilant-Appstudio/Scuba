@@ -16,6 +16,7 @@
 		0321763E1F9E5F7A007E1F5B /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321763B1F9E5F79007E1F5B /* CommonMethods.swift */; };
 		0321763F1F9E5F7A007E1F5B /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321763C1F9E5F79007E1F5B /* Shared.swift */; };
 		032176401F9E5F7A007E1F5B /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321763D1F9E5F7A007E1F5B /* AlertMessages.swift */; };
+		03A958961FA441AF00CBE103 /* ScubaCalendar.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 03A958951FA42A2F00CBE103 /* ScubaCalendar.sqlite */; };
 		03AEBFE21F9FAE650021805B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032176281F9E4F13007E1F5B /* LaunchScreen.storyboard */; };
 		03AEBFE31F9FAE650021805B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032176291F9E4F13007E1F5B /* Main.storyboard */; };
 		03AEBFE71F9FB29A0021805B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AEBFE61F9FB29A0021805B /* LoginVC.swift */; };
@@ -75,6 +76,7 @@
 		0321763B1F9E5F79007E1F5B /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
 		0321763C1F9E5F79007E1F5B /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		0321763D1F9E5F7A007E1F5B /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
+		03A958951FA42A2F00CBE103 /* ScubaCalendar.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScubaCalendar.sqlite; sourceTree = "<group>"; };
 		03AEBFE61F9FB29A0021805B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		03AEBFE91FA01DD90021805B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		03BFBCA01FA1840700F59995 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		032176331F9E5EDD007E1F5B /* DBManager */ = {
 			isa = PBXGroup;
 			children = (
+				03A958951FA42A2F00CBE103 /* ScubaCalendar.sqlite */,
 				032176351F9E5F0A007E1F5B /* DatabaseManager.swift */,
 			);
 			path = DBManager;
@@ -400,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A958961FA441AF00CBE103 /* ScubaCalendar.sqlite in Resources */,
 				03BFBCC61FA1841F00F59995 /* Montserrat-Black.ttf in Resources */,
 				03BFBCC71FA1841F00F59995 /* Montserrat-BlackItalic.ttf in Resources */,
 				03BFBCC81FA1841F00F59995 /* Montserrat-Bold.ttf in Resources */,

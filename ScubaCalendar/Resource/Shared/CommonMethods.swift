@@ -183,7 +183,7 @@ class CommonMethods: NSObject {
 
     class func setCommonLayer(getButton: UIButton) -> UIButton {
  
-        getButton.layer.borderColor = UIColor.darkGray.cgColor
+        getButton.layer.borderColor = UIColor.white.cgColor
         getButton.layer.borderWidth = 0.5
         getButton.layer.cornerRadius = 5.0
         

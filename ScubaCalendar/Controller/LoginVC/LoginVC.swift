@@ -45,14 +45,14 @@ class LoginVC: UIViewController {
         
         sharedObj = Shared.sharedInstance
         
-        
         // set common layer
         btnGuest = CommonMethods.setCommonLayer(getButton: btnGuest)
         btnFacebook = CommonMethods.setCommonLayer(getButton: btnFacebook)
         btnGoogle = CommonMethods.setCommonLayer(getButton: btnGoogle)
         txtLogin = CommonMethods.setCommonTextfield(getTextfield: txtLogin)
         txtPassword = CommonMethods.setCommonTextfield(getTextfield: txtPassword)
-       
+        btnForgotPwd.setTitleColor(CommonMethods.setTopPlaceHolderColor, for: .normal)
+        
         // set font & font size
         btnFacebook.titleLabel?.font =  CommonMethods.SetFont.MontserratMedium?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
         btnGoogle.titleLabel?.font =  CommonMethods.SetFont.MontserratMedium?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
@@ -62,8 +62,6 @@ class LoginVC: UIViewController {
         btnLogin.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
         btnGuest.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
         btnSignUP.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
-        
-       
     }
     
     // MARK: - Login Validation
@@ -139,8 +137,7 @@ extension LoginVC: APIManagerDelegate {
                 return
             }
             
-            userModelObj = UserData.init(getUserData: getUserDict)
-            
+            userModelObj = UserData.init(fromDictionary: getUserDict)
         }
     }
     
