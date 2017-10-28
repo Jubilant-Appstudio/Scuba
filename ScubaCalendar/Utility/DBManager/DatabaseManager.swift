@@ -63,7 +63,7 @@ class DatabaseManager: NSObject {
         return false
     }
     
-    func fetchRecord(whereCondition: String) -> NSMutableArray {
+    func fetchRecord(tableName: String, whereCondition: String) -> NSMutableArray {
         
         let quotes = NSMutableArray()
         
@@ -73,7 +73,7 @@ class DatabaseManager: NSObject {
             
             if whereCondition == "" {
                 // get all record
-                if let rs = database.executeQuery("select * from Quotes", withArgumentsIn: []) {
+                if let rs = database.executeQuery("select * from \(tableName)", withArgumentsIn: []) {
                     while rs.next() {
                         quotes.add(rs.resultDictionary!)
                     }
@@ -84,7 +84,7 @@ class DatabaseManager: NSObject {
             } else {
                 
                 // where condition
-                let queryString = "select * from Quotes where \(whereCondition)"
+                let queryString = "select * from \(tableName) where \(whereCondition)"
                 if let rs = database.executeQuery(queryString, withArgumentsIn: []) {
                     while rs.next() {
                         
@@ -132,7 +132,7 @@ class DatabaseManager: NSObject {
             
             if openDatabase() {
                 
-                if !(database.executeUpdate("insert into User (user_country, user_created_on, user_described_as,user_dob, user_email, user_fav_animal,user_fav_country, user_fcm_device, user_fcm_token,user_gander, user_id, user_img,user_name, user_password, user_social_id,user_social_type, user_status, user_token) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", withArgumentsIn: [userCountry,userCreatedOn,userDescribedAs,userDob,userEmail,userFavAnimal,userFavCountry,userFcmDevice,userFcmToken,userGander,userId,userImg,userName,userPassword,userSocialId,userSocialType,userStatus,userToken]) != nil) {
+                if !(database.executeUpdate("insert into User (user_country, user_created_on, user_described_as,user_dob, user_email, user_fav_animal,user_fav_country, user_fcm_device, user_fcm_token,user_gander, user_id, user_img,user_name, user_password, user_social_id,user_social_type, user_status, user_token) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", withArgumentsIn: [userCountry, userCreatedOn, userDescribedAs, userDob, userEmail, userFavAnimal, userFavCountry, userFcmDevice, userFcmToken, userGander, userId, userImg, userName, userPassword, userSocialId, userSocialType, userStatus, userToken]) != nil) {
                     
                     print("insert 1 table failed: \(database.lastErrorMessage())")
                 }
@@ -140,7 +140,51 @@ class DatabaseManager: NSObject {
             
             database.close()
             
+        } else if tableName == "Animal" {
+            
+                let animalBigImg = getData.object(forKey: "animal_big_img") as? String ?? ""
+                let animalCreatedOn = getData.object(forKey: "animal_created_on") as? String ?? ""
+                let animalId = getData.object(forKey: "animal_id") as? Int ?? 0
+                let animalImg = getData.object(forKey: "animal_img") as? String ?? ""
+                let animalName = getData.object(forKey: "animal_name") as? String ?? ""
+                let animalSmallImg = getData.object(forKey: "animal_small_img") as? String ?? ""
+                let animalStatus = getData.object(forKey: "animal_status") as? Int ?? 0
+                
+                // self.copyFile(dbFileName as NSString)
+                database = FMDatabase(path: setDatabasePath as String)
+                
+                if openDatabase() {
+                    
+                    if !(database.executeUpdate("insert into Animal (animal_big_img, animal_created_on, animal_id,animal_img, animal_name, animal_small_img,animal_status) values (?,?,?,?,?,?,?)", withArgumentsIn: [animalBigImg, animalCreatedOn, animalId, animalImg, animalName, animalSmallImg, animalStatus]) != nil) {
+                        
+                        print("insert 1 table failed: \(database.lastErrorMessage())")
+                    }
+                }
+                
+                database.close()
+            
+        } else if tableName == "Country" {
+            
+            let countryData = getData.object(forKey: "country_data") as? String ?? ""
+            let countryId = getData.object(forKey: "country_id") as? Int ?? 0
+            let countryMap = getData.object(forKey: "country_map") as? String ?? ""
+            let countryName = getData.object(forKey: "country_name") as? String ?? ""
+            let countryMapSmall = getData.object(forKey: "country_map_small") as? String ?? ""
+            
+            // self.copyFile(dbFileName as NSString)
+            database = FMDatabase(path: setDatabasePath as String)
+            
+            if openDatabase() {
+                
+                if !(database.executeUpdate("insert into Country (country_data, country_id, country_map,country_name, country_map_small) values (?,?,?,?,?)", withArgumentsIn: [countryData, countryId, countryMap, countryName, countryMapSmall]) != nil) {
+                    
+                    print("insert 1 table failed: \(database.lastErrorMessage())")
+                }
+            }
+            
+            database.close()
         }
+        
     }
     
     func updateData(whereCondition: String) {

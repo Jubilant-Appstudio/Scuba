@@ -45,22 +45,27 @@ class LoginVC: UIViewController {
         
         sharedObj = Shared.sharedInstance
         
-        // set common layer
-        btnGuest = CommonMethods.setCommonLayer(getButton: btnGuest)
+        // set common layer & set font & font size
         btnFacebook = CommonMethods.setCommonLayer(getButton: btnFacebook)
-        btnGoogle = CommonMethods.setCommonLayer(getButton: btnGoogle)
-        txtLogin = CommonMethods.setCommonTextfield(getTextfield: txtLogin)
-        txtPassword = CommonMethods.setCommonTextfield(getTextfield: txtPassword)
-        btnForgotPwd.setTitleColor(CommonMethods.setTopPlaceHolderColor, for: .normal)
-        
-        // set font & font size
         btnFacebook.titleLabel?.font =  CommonMethods.SetFont.MontserratMedium?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
+        
+        btnGoogle = CommonMethods.setCommonLayer(getButton: btnGoogle)
         btnGoogle.titleLabel?.font =  CommonMethods.SetFont.MontserratMedium?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
+        
+        txtLogin = CommonMethods.setCommonTextfield(getTextfield: txtLogin)
         txtLogin.font = CommonMethods.SetFont.RalewayRegular?.withSize(CGFloat(CommonMethods.SetFontSize.S17))
+        
+        txtPassword = CommonMethods.setCommonTextfield(getTextfield: txtPassword)
         txtPassword.font = CommonMethods.SetFont.RalewayRegular?.withSize(CGFloat(CommonMethods.SetFontSize.S17))
+        
+        btnForgotPwd.setTitleColor(CommonMethods.SetColor.themeColor, for: .normal)
         btnForgotPwd.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S10))
+        
         btnLogin.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
+        
+        btnGuest = CommonMethods.setCommonLayer(getButton: btnGuest)
         btnGuest.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
+        
         btnSignUP.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
     }
     
@@ -69,7 +74,7 @@ class LoginVC: UIViewController {
         
         if !(txtLogin.text?.isEmail)! {
             CommonMethods.showAlert("", Description: AlertMessages.strInvalidEmail as NSString)
-        
+            
             return false
         }
         
@@ -97,7 +102,7 @@ class LoginVC: UIViewController {
                 guard let getPwd = txtPassword.text else {
                     return
                 }
-               
+                
                 let strParameter = "user_email=\(getEmail)&user_password=\(getPwd)&is_social_login=\(isSocialLogin)&user_social_id=\(userSocialID)"
                 
                 CommonMethods.showMBProgressHudView(self.view)
@@ -140,7 +145,7 @@ class LoginVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
 }
 
 // MARK: - API Manager Delegate
@@ -165,7 +170,7 @@ extension LoginVC: APIManagerDelegate {
     }
     
     func apiResponseFail(response: NSDictionary, apiIdentifier: String) {
-    
+        
         if apiIdentifier == "LoginAction" {
             CommonMethods.hideMBProgressHud()
             
@@ -173,7 +178,7 @@ extension LoginVC: APIManagerDelegate {
     }
     
     func apiResponseError(error: Error?, apiIdentifier: String) {
-       
+        
         if apiIdentifier == "LoginAction" {
             CommonMethods.hideMBProgressHud()
             CommonMethods.showAlert("", Description: AlertMessages.strErrorAlert as NSString)

@@ -33,24 +33,24 @@ class UserData {
     
     init(fromDictionary dictionary: NSDictionary) {
         
-        userCountry = dictionary["user_country"] as? Int
-        userCreatedOn = dictionary["user_created_on"] as? String
-        userDescribedAs = dictionary["user_described_as"] as? String
-        userDob = dictionary["user_dob"] as? String
-        userEmail = dictionary["user_email"] as? String
-        userFavAnimal = dictionary["user_fav_animal"] as? String
-        userFavCountry = dictionary["user_fav_country"] as? String
-        userFcmDevice = dictionary["user_fcm_device"] as? String
-        userFcmToken = dictionary["user_fcm_token"] as? String
-        userGander = dictionary["user_gander"] as? String
-        userId = dictionary["user_id"] as? Int
-        userImg = dictionary["user_img"] as? String
-        userName = dictionary["user_name"] as? String
-        userPassword = dictionary["user_password"] as? String
-        userSocialId = dictionary["user_social_id"] as? String
-        userSocialType = dictionary["user_social_type"] as? String
-        userStatus = dictionary["user_status"] as? Int
-        userToken = dictionary["user_token"] as? Int
+        userCountry = dictionary["user_country"] as? Int ?? 0
+        userCreatedOn = dictionary["user_created_on"] as? String ?? ""
+        userDescribedAs = dictionary["user_described_as"] as? String ?? ""
+        userDob = dictionary["user_dob"] as? String ?? ""
+        userEmail = dictionary["user_email"] as? String ?? ""
+        userFavAnimal = dictionary["user_fav_animal"] as? String ?? ""
+        userFavCountry = dictionary["user_fav_country"] as? String ?? ""
+        userFcmDevice = dictionary["user_fcm_device"] as? String ?? ""
+        userFcmToken = dictionary["user_fcm_token"] as? String ?? ""
+        userGander = dictionary["user_gander"] as? String ?? ""
+        userId = dictionary["user_id"] as? Int ?? 0
+        userImg = dictionary["user_img"] as? String ?? ""
+        userName = dictionary["user_name"] as? String ?? ""
+        userPassword = dictionary["user_password"] as? String ?? ""
+        userSocialId = dictionary["user_social_id"] as? String ?? ""
+        userSocialType = dictionary["user_social_type"] as? String ?? ""
+        userStatus = dictionary["user_status"] as? Int ?? 0
+        userToken = dictionary["user_token"] as? Int ?? 0
         
         insertDataintoDB(dataDict: dictionary)
     }

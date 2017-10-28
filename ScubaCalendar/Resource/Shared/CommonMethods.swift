@@ -27,14 +27,24 @@ class CommonMethods: NSObject {
         static let S20 = 20.0
     }
     
+    struct SetColor {
+        static let clearColor = UIColor.clear
+        static let whiteColor = UIColor.white
+        static let themeColor = UIColor(red: 63/255.0, green: 81/255.0, blue: 114/255.0, alpha: 1.0)
+        static let darkGrayColor = UIColor(red: 104/255.0, green: 104/255.0, blue: 104/255.0, alpha: 1.0)
+        static let searchbarBGColor = UIColor(red: 15/255.0, green: 19/255.0, blue: 30/255.0, alpha: 1.0)
+    }
+    
+    /*
+    static var setTextColor = UIColor.white
+    static var setLineColor = UIColor.white
+    static var setTopPlaceHolderColor = UIColor(red: 63/255.0, green: 81/255.0, blue: 114/255.0, alpha: 1.0)
+    */
+    
     static var hud: MBProgressHUD = MBProgressHUD()
     static var  navControl: UINavigationController?
     static var alert: UIAlertController?
     static var sharedObj: Shared?
-    
-    static var setTextColor = UIColor.white
-    static var setLineColor = UIColor.white
-    static var setTopPlaceHolderColor = UIColor(red: 63/255.0, green: 81/255.0, blue: 114/255.0, alpha: 1.0)
     
     class func navigateTo(_ destinationVC: UIViewController, inNavigationViewController navigationController: UINavigationController, animated: Bool ) {
         
@@ -192,15 +202,33 @@ class CommonMethods: NSObject {
     
     class func setCommonTextfield(getTextfield: SkyFloatingLabelTextField) -> SkyFloatingLabelTextField {
        
-        getTextfield.textColor = CommonMethods.setTextColor
-        getTextfield.selectedLineColor = CommonMethods.setLineColor
+        getTextfield.textColor = CommonMethods.SetColor.whiteColor
+        getTextfield.selectedLineColor = CommonMethods.SetColor.whiteColor
         
-        getTextfield.placeholderColor = CommonMethods.setTopPlaceHolderColor
-        getTextfield.titleColor = CommonMethods.setTopPlaceHolderColor
-        getTextfield.lineColor = CommonMethods.setTopPlaceHolderColor
-        getTextfield.selectedTitleColor = CommonMethods.setTopPlaceHolderColor
+        getTextfield.placeholderColor = CommonMethods.SetColor.themeColor
+        getTextfield.titleColor = CommonMethods.SetColor.themeColor
+        getTextfield.lineColor = CommonMethods.SetColor.themeColor
+        getTextfield.selectedTitleColor = CommonMethods.SetColor.themeColor
         
         return getTextfield
     }
     
+    class func setCommonSearchField(getSearchBar: UISearchBar) -> UISearchBar {
+        
+        getSearchBar.borderColor = CommonMethods.SetColor.darkGrayColor
+        getSearchBar.borderWidth = 0.5
+        getSearchBar.cornerRadius = 5
+        
+        getSearchBar.shadowOffset = CGSize(width: 0, height: 1)
+        
+        getSearchBar.barTintColor = CommonMethods.SetColor.clearColor
+        
+        getSearchBar.barStyle = .black
+        getSearchBar.barTintColor = CommonMethods.SetColor.clearColor
+        getSearchBar.tintColor = CommonMethods.SetColor.clearColor
+        
+        getSearchBar.textField?.textColor = CommonMethods.SetColor.whiteColor
+        
+        return getSearchBar
+    }
 }
