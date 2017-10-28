@@ -1,8 +1,8 @@
 //
-//  LoginVC.swift
+//  SignUPVC.swift
 //  ScubaCalendar
 //
-//  Created by Mahipalsinh on 10/24/17.
+//  Created by Mahipalsinh on 10/28/17.
 //  Copyright © 2017 CodzGarage. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import UIKit
 import SkyFloatingLabelTextField
 import SwifterSwift
 
-class LoginVC: UIViewController {
-    
+class SignUPVC: UIViewController {
+
     // MARK: - Variable Declare
     var userModelObj: UserData?
     var sharedObj: Shared?
@@ -19,22 +19,20 @@ class LoginVC: UIViewController {
     var userSocialID = "asd4as8d7a6s54da6s57d65as4d5as4d8874"
     
     // MARK: - Outlet Declare
-    @IBOutlet weak var txtLogin: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtName: SkyFloatingLabelTextField!
+    @IBOutlet weak var txtEmail: SkyFloatingLabelTextField!
     @IBOutlet weak var txtPassword: SkyFloatingLabelTextField!
-    
-    @IBOutlet weak var btnGuest: UIButton!
-    @IBOutlet weak var btnFacebook: UIButton!
-    @IBOutlet weak var btnGoogle: UIButton!
-    @IBOutlet weak var btnForgotPwd: UIButton!
-    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var txtConfirmPassword: SkyFloatingLabelTextField!
     @IBOutlet weak var btnSignUP: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!
     
     // MARK: - View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupUI()
-        
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -46,30 +44,32 @@ class LoginVC: UIViewController {
         sharedObj = Shared.sharedInstance
         
         // set common layer
-        btnGuest = CommonMethods.setCommonLayer(getButton: btnGuest)
-        btnFacebook = CommonMethods.setCommonLayer(getButton: btnFacebook)
-        btnGoogle = CommonMethods.setCommonLayer(getButton: btnGoogle)
-        txtLogin = CommonMethods.setCommonTextfield(getTextfield: txtLogin)
+        txtName = CommonMethods.setCommonTextfield(getTextfield: txtName)
+        txtEmail = CommonMethods.setCommonTextfield(getTextfield: txtEmail)
         txtPassword = CommonMethods.setCommonTextfield(getTextfield: txtPassword)
-        btnForgotPwd.setTitleColor(CommonMethods.setTopPlaceHolderColor, for: .normal)
+        txtConfirmPassword = CommonMethods.setCommonTextfield(getTextfield: txtConfirmPassword)
         
         // set font & font size
-        btnFacebook.titleLabel?.font =  CommonMethods.SetFont.MontserratMedium?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
-        btnGoogle.titleLabel?.font =  CommonMethods.SetFont.MontserratMedium?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
-        txtLogin.font = CommonMethods.SetFont.RalewayRegular?.withSize(CGFloat(CommonMethods.SetFontSize.S17))
+        txtName.font = CommonMethods.SetFont.RalewayRegular?.withSize(CGFloat(CommonMethods.SetFontSize.S17))
+        txtEmail.font = CommonMethods.SetFont.RalewayRegular?.withSize(CGFloat(CommonMethods.SetFontSize.S17))
         txtPassword.font = CommonMethods.SetFont.RalewayRegular?.withSize(CGFloat(CommonMethods.SetFontSize.S17))
-        btnForgotPwd.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S10))
+        txtConfirmPassword.font = CommonMethods.SetFont.RalewayRegular?.withSize(CGFloat(CommonMethods.SetFontSize.S17))
         btnLogin.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
-        btnGuest.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
         btnSignUP.titleLabel?.font =  CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
     }
     
-    // MARK: - Login Validation
-    func loginValidation() -> Bool {
+    // MARK: - Signup Validation
+    func signupValidation() -> Bool {
         
-        if !(txtLogin.text?.isEmail)! {
+        if txtName.text?.trimmed.length == 0 {
+            CommonMethods.showAlert("", Description: AlertMessages.strInvalidName as NSString)
+            
+            return false
+        }
+        
+        if !(txtEmail.text?.isEmail)! {
             CommonMethods.showAlert("", Description: AlertMessages.strInvalidEmail as NSString)
-        
+            
             return false
         }
         
@@ -79,32 +79,44 @@ class LoginVC: UIViewController {
             return false
         }
         
+        if txtPassword.text == txtConfirmPassword.text {
+            CommonMethods.showAlert("", Description: AlertMessages.strPwdNotMatch as NSString)
+            
+            return false
+        }
+        
+        // Approved Terms & condition reaminig
+        
+        
         return true
     }
-    
-    // MARK: - Login Action
-    @IBAction func loginAction(_ sender: Any) {
+    // MARK: - signUP
+    @IBAction func signUPAction(_ sender: Any) {
         
         if (sharedObj?.isReachable)! {
             
-            // if login validation == true
-            if loginValidation() {
+            // if signup validation == true
+            if signupValidation() {
                 
-                guard let getEmail = txtLogin.text else {
+                guard let getName = txtName.text else {
+                    return
+                }
+                
+                guard let getEmail = txtEmail.text else {
                     return
                 }
                 
                 guard let getPwd = txtPassword.text else {
                     return
                 }
-               
-                let strParameter = "user_email=\(getEmail)&user_password=\(getPwd)&is_social_login=\(isSocialLogin)&user_social_id=\(userSocialID)"
+                
+                let strParameter = "user_name=\(getName)&user_email=\(getEmail)&user_password=\(getPwd)"
                 
                 CommonMethods.showMBProgressHudView(self.view)
                 
                 let apiManagerObj = APIManager()
                 apiManagerObj.delegate = self
-                apiManagerObj.requestForURL(strUrl: APIList.strUserLogin, httpMethod: "post", parameters: strParameter, includeHeader: false, apiIdentifier: "LoginAction")
+                apiManagerObj.requestForURL(strUrl: APIList.strUserCreate, httpMethod: "post", parameters: strParameter, includeHeader: false, apiIdentifier: "SignupAction")
                 
             }
             
@@ -114,37 +126,32 @@ class LoginVC: UIViewController {
         
     }
     
-    // MARK: - Guest Action
-    @IBAction func guestAction(_ sender: Any) {
-    }
-    
-    // MARK: - SignUP Action
-    @IBAction func signUPAction(_ sender: Any) {
-        
+    // MARK: - Login
+    @IBAction func logINAction(_ sender: Any) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        if let signupObj = mainStoryboard.instantiateViewController(withIdentifier: "SignUPVC") as? SignUPVC {
+        if let loginObj = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC {
             
             UIView.beginAnimations("animation", context: nil)
             UIView.setAnimationDuration(1.0)
             
-            CommonMethods.navigateTo(signupObj, inNavigationViewController: self.navigationController!, animated: false)
+            CommonMethods.navigateTo(loginObj, inNavigationViewController: self.navigationController!, animated: false)
             
-            UIView.setAnimationTransition(UIViewAnimationTransition.flipFromLeft, for: self.navigationController!.view, cache: false)
+            UIView.setAnimationTransition(UIViewAnimationTransition.flipFromRight, for: self.navigationController!.view, cache: false)
             
             UIView.commitAnimations()
         }
     }
     
-    // MARK: - Memory Warning
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 // MARK: - API Manager Delegate
-extension LoginVC: APIManagerDelegate {
+extension SignUPVC: APIManagerDelegate {
     
     func apiResponseSuccess(response: NSDictionary, apiIdentifier: String) {
         
@@ -160,12 +167,11 @@ extension LoginVC: APIManagerDelegate {
                 return
             }
             
-            userModelObj = UserData.init(fromDictionary: getUserDict)
         }
     }
     
     func apiResponseFail(response: NSDictionary, apiIdentifier: String) {
-    
+        
         if apiIdentifier == "LoginAction" {
             CommonMethods.hideMBProgressHud()
             
@@ -173,7 +179,7 @@ extension LoginVC: APIManagerDelegate {
     }
     
     func apiResponseError(error: Error?, apiIdentifier: String) {
-       
+        
         if apiIdentifier == "LoginAction" {
             CommonMethods.hideMBProgressHud()
             CommonMethods.showAlert("", Description: AlertMessages.strErrorAlert as NSString)

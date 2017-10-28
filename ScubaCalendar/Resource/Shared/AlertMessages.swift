@@ -18,4 +18,8 @@ class AlertMessages: NSObject {
     static let strInvalidEmail = "Please enter valid email"
     static let strInvalidPWD = "Please enter Password"
     
+    // SignUPVC
+    static let strInvalidName = "Please enter name"
+    static let strPwdNotMatch = "Please Password and Confirm Password not match"
+    
 }

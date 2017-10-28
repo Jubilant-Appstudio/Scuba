@@ -15,4 +15,7 @@ class APIList: NSObject {
     //User Login
     static let strUserLogin =  strUserUrl + "login"
     
+    //User Login create
+    static let strUserCreate =  strUserUrl + "create"
+    
 }
