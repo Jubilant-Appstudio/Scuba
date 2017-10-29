@@ -21,6 +21,9 @@ class APIList: NSObject {
     //User Login create
     static let strUserCreate =  strUserUrl + "create"
     
+    //User update profile
+    static let strUserProfile =  strUserUrl + "profile"
+    
     // Animal List
     static let strAnimalList = strAnimalUrl + "get_list"
     

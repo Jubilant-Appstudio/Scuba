@@ -34,6 +34,7 @@ class CommonMethods: NSObject {
         static let themeColor = UIColor(red: 63/255.0, green: 81/255.0, blue: 114/255.0, alpha: 1.0)
         static let darkGrayColor = UIColor(red: 104/255.0, green: 104/255.0, blue: 104/255.0, alpha: 1.0)
         static let searchbarBGColor = UIColor(red: 15/255.0, green: 19/255.0, blue: 30/255.0, alpha: 1.0)
+        static let pickerBorderColor = UIColor(red: 0.0/255.0, green: 81.0/255.0, blue: 114.0/255.0, alpha: 1.0)
     }
     
     /*

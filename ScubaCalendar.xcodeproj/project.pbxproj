@@ -61,6 +61,8 @@
 		03BFBCE81FA1841F00F59995 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BFBCC31FA1840800F59995 /* Raleway-SemiBoldItalic.ttf */; };
 		03BFBCE91FA1841F00F59995 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BFBCC41FA1840800F59995 /* Raleway-Thin.ttf */; };
 		03BFBCEA1FA1841F00F59995 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BFBCC51FA1840800F59995 /* Raleway-ThinItalic.ttf */; };
+		03D4FFC21FA5A736005ED478 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4FFC01FA5A736005ED478 /* CountryCell.swift */; };
+		03D4FFC31FA5A736005ED478 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D4FFC11FA5A736005ED478 /* CountryCell.xib */; };
 		03F82E971FA4E22000887783 /* SignUPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F82E961FA4E20D00887783 /* SignUPVC.swift */; };
 		03F82E991FA4E24500887783 /* SignupVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F82E981FA4E24500887783 /* SignupVC2.swift */; };
 		03F82E9C1FA4E4A800887783 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F82E9B1FA4E47600887783 /* AnimalModel.swift */; };
@@ -125,6 +127,8 @@
 		03BFBCC31FA1840800F59995 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		03BFBCC41FA1840800F59995 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		03BFBCC51FA1840800F59995 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		03D4FFC01FA5A736005ED478 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		03D4FFC11FA5A736005ED478 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 		03F82E961FA4E20D00887783 /* SignUPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUPVC.swift; sourceTree = "<group>"; };
 		03F82E981FA4E24500887783 /* SignupVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC2.swift; sourceTree = "<group>"; };
 		03F82E9B1FA4E47600887783 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				034BDA981FA5184600E89DFC /* AnimalView */,
+				03D4FFBF1FA5A718005ED478 /* CountryView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +362,15 @@
 			path = Raleway;
 			sourceTree = "<group>";
 		};
+		03D4FFBF1FA5A718005ED478 /* CountryView */ = {
+			isa = PBXGroup;
+			children = (
+				03D4FFC01FA5A736005ED478 /* CountryCell.swift */,
+				03D4FFC11FA5A736005ED478 /* CountryCell.xib */,
+			);
+			path = CountryView;
+			sourceTree = "<group>";
+		};
 		03F82E941FA4E1DE00887783 /* SignupVC2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +510,7 @@
 				03BFBCE41FA1841F00F59995 /* Raleway-Medium.ttf in Resources */,
 				03BFBCE51FA1841F00F59995 /* Raleway-MediumItalic.ttf in Resources */,
 				03BFBCE61FA1841F00F59995 /* Raleway-Regular.ttf in Resources */,
+				03D4FFC31FA5A736005ED478 /* CountryCell.xib in Resources */,
 				03BFBCE71FA1841F00F59995 /* Raleway-SemiBold.ttf in Resources */,
 				03BFBCE81FA1841F00F59995 /* Raleway-SemiBoldItalic.ttf in Resources */,
 				03BFBCE91FA1841F00F59995 /* Raleway-Thin.ttf in Resources */,
@@ -592,6 +607,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D4FFC21FA5A736005ED478 /* CountryCell.swift in Sources */,
 				0333775A1FA4FB4800E05DA9 /* CountryModel.swift in Sources */,
 				03F82E9C1FA4E4A800887783 /* AnimalModel.swift in Sources */,
 				03F82E971FA4E22000887783 /* SignUPVC.swift in Sources */,

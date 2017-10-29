@@ -49,11 +49,6 @@ class AnimalModel {
     var getBigImage: Int {
         return animalStatus
     }
-    /*
-    var getIsSelected: Bool {
-        return animalSelected
-    }
-    */
     
     public var getIsSelected: Bool {
         get {
@@ -63,7 +58,6 @@ class AnimalModel {
             animalSelected = selectedStatus
         }
     }
-    
     
 	init(fromDictionary dictionary: NSDictionary) {
 		animalBigImg = dictionary["animal_big_img"] as? String ?? ""

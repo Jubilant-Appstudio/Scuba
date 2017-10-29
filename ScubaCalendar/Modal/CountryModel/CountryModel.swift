@@ -11,15 +11,41 @@ class CountryModel {
 
     var databaseObj: DatabaseManager!
     
-	var countryData: String!
-	var countryId: Int!
-	var countryMap: String!
-	var countryMapSmall: String!
-	var countryName: String!
+	private var countryData: String!
+	private var countryId: Int!
+	private var countryMap: String!
+	private var countryMapSmall: String!
+	private var countryName: String!
 
-    /**
-	 * Instantiate the instance using the passed dictionary values to set the properties values
-	 */
+    private var countrySelected: Bool!
+    
+    var getCountryData: String {
+        return countryData
+    }
+    
+    var getCountryId: Int {
+        return countryId
+    }
+    
+    var getCountryMap: String {
+        return countryMap
+    }
+    
+    var getCountryMapSmall: String {
+        return countryMapSmall
+    }
+    
+    var getCountryName: String {
+        return countryName
+    }
+    public var getIsSelected: Bool {
+        get {
+            return countrySelected
+        }
+        set(selectedStatus) {
+            countrySelected = selectedStatus
+        }
+    }
     
 	init(fromDictionary dictionary: NSDictionary) {
 		countryData = dictionary["country_data"] as? String ?? ""
@@ -27,7 +53,7 @@ class CountryModel {
 		countryMap = dictionary["country_map"] as? String ?? ""
 		countryMapSmall = dictionary["country_map_small"] as? String ?? ""
 		countryName = dictionary["country_name"] as? String ?? ""
-        
+        countrySelected = false
 	}
 
     func insertCountryRecord(dataDict: NSDictionary) {
