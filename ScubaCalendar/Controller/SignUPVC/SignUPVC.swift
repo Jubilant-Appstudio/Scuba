@@ -97,7 +97,6 @@ class SignUPVC: UIViewController {
         if let signupObj = mainStoryboard.instantiateViewController(withIdentifier: "SignupVC2") as? SignupVC2 {
             
             CommonMethods.navigateTo(signupObj, inNavigationViewController: self.navigationController!, animated: true)
-            
         }
         
         return

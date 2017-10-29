@@ -12,6 +12,14 @@ import SkyFloatingLabelTextField
 
 class CommonMethods: NSObject {
     
+    //Declare enum
+    enum AnimationType {
+        case ANIMATERIGHT
+        case ANIMATELEFT
+        case ANIMATEUP
+        case ANIMATEDOWN
+    }
+    
     struct SetFont {
         static let MontserratSemiBold = UIFont(name: "Montserrat-SemiBold", size: 15.0)
         static let MontserratMedium = UIFont(name: "Montserrat-Medium", size: 15.0)
@@ -38,10 +46,10 @@ class CommonMethods: NSObject {
     }
     
     /*
-    static var setTextColor = UIColor.white
-    static var setLineColor = UIColor.white
-    static var setTopPlaceHolderColor = UIColor(red: 63/255.0, green: 81/255.0, blue: 114/255.0, alpha: 1.0)
-    */
+     static var setTextColor = UIColor.white
+     static var setLineColor = UIColor.white
+     static var setTopPlaceHolderColor = UIColor(red: 63/255.0, green: 81/255.0, blue: 114/255.0, alpha: 1.0)
+     */
     
     static var hud: MBProgressHUD = MBProgressHUD()
     static var  navControl: UINavigationController?
@@ -71,8 +79,8 @@ class CommonMethods: NSObject {
         
         DispatchQueue.main.async(execute: {
             if VCFound == true {
-             //   navigationController .popToViewController(viewControllers.object(at: indexofVC) as! UIViewController, animated: animated)
-               
+                //   navigationController .popToViewController(viewControllers.object(at: indexofVC) as! UIViewController, animated: animated)
+                
                 if let navigationObj: UIViewController = viewControllers.object(at: indexofVC) as? UIViewController {
                     navigationController.popToViewController(navigationObj, animated: animated)
                 }
@@ -113,13 +121,13 @@ class CommonMethods: NSObject {
         }
         
         DispatchQueue.main.async {
-        //    alert = UIAlertView(title: title as String, message: message as String, delegate: nil, cancelButtonTitle: "Okay")
-         //   alert!.show()
+            //    alert = UIAlertView(title: title as String, message: message as String, delegate: nil, cancelButtonTitle: "Okay")
+            //   alert!.show()
             
             alert = UIAlertController(title: title as String, message: message as String, preferredStyle: .alert)
-           
+            
             alert?.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-
+            
             getTopViewController().present(alert!, animated: true, completion: nil)
         }
     }
@@ -192,9 +200,9 @@ class CommonMethods: NSObject {
         }
         
     }
-
+    
     class func setCommonLayer(getButton: UIButton) -> UIButton {
- 
+        
         getButton.layer.borderColor = UIColor.white.cgColor
         getButton.layer.borderWidth = 0.5
         getButton.layer.cornerRadius = 5.0
@@ -203,7 +211,7 @@ class CommonMethods: NSObject {
     }
     
     class func setCommonTextfield(getTextfield: SkyFloatingLabelTextField) -> SkyFloatingLabelTextField {
-       
+        
         getTextfield.textColor = CommonMethods.SetColor.whiteColor
         getTextfield.selectedLineColor = CommonMethods.SetColor.whiteColor
         
@@ -232,5 +240,62 @@ class CommonMethods: NSObject {
         getSearchBar.textField?.textColor = CommonMethods.SetColor.whiteColor
         
         return getSearchBar
+    }
+    
+    class func showViewControllerWith(storyboard: String , newViewController: UIViewController, usingAnimation animationType: AnimationType) {
+        
+        let currentViewController = UIApplication.shared.delegate?.window??.rootViewController
+        let width = currentViewController?.view.frame.size.width
+        let height = currentViewController?.view.frame.size.height
+        
+        var previousFrame: CGRect?
+        var nextFrame: CGRect?
+        
+        switch animationType {
+        case .ANIMATELEFT:
+            previousFrame = CGRect(x: (width!) - 1, y: 0.0, width: width!, height: height!)
+            nextFrame = CGRect(x: -(width!), y: 0.0, width: width!, height: height!)
+        case .ANIMATERIGHT:
+            previousFrame = CGRect(x: -(width!) + 1, y: 0.0, width: width!, height: height!)
+            nextFrame = CGRect(x: (width!), y: 0.0, width: width!, height: height!)
+        case .ANIMATEUP:
+            previousFrame = CGRect(x: 0.0, y: (height!) - 1, width: width!, height: height!)
+            nextFrame = CGRect(x: 0.0, y: -(height!) + 1, width: width!, height: height!)
+        case .ANIMATEDOWN:
+            previousFrame = CGRect(x: 0.0, y: -(height!) + 1, width: width!, height: height!)
+            nextFrame = CGRect(x: 0.0, y: (height!) + 1, width: width!, height: height!)
+        }
+        
+        newViewController.view.frame = previousFrame!
+        UIApplication.shared.delegate?.window??.addSubview(newViewController.view)
+        UIView.animate(withDuration: 0.3,
+                       animations: { () -> Void in
+                        newViewController.view.frame = (currentViewController?.view.frame)!
+                        currentViewController?.view.frame = nextFrame!
+                        
+        }) { (_: Bool) -> Void in
+
+            UIApplication.shared.delegate?.window??.removeSubviews()
+            
+            if storyboard == "Home" {
+                
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+                
+                UIApplication.shared.delegate?.window??.rootViewController  = mainStoryboard.instantiateInitialViewController()
+                
+            } else {
+       
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                guard let loginVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC else {
+                    return
+                }
+                
+                let nav = UINavigationController(rootViewController: loginVC)
+                nav.setNavigationBarHidden(true, animated: false)
+                
+                UIApplication.shared.delegate?.window??.rootViewController = nav
+            }
+            
+        }
     }
 }

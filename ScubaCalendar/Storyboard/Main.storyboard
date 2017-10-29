@@ -38,9 +38,6 @@
                                     <constraint firstAttribute="height" constant="30" id="qCi-kH-kVi"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="dFW-a6-r9i" kind="show" id="a8G-ta-J8x"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359" y="83"/>
+            <point key="canvasLocation" x="193" y="90"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="I0A-6i-JZY">
@@ -456,14 +453,14 @@
             <objects>
                 <viewController storyboardIdentifier="SignupVC2" id="GQ2-07-ocZ" customClass="SignupVC2" customModule="ScubaCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RRQ-VT-SpC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="MW4-Pw-kfR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hB-na-wXI">
-                                <rect key="frame" x="0.0" y="80" width="375" height="820"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vP-rh-pda">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="740"/>
@@ -754,7 +751,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yVa-Fs-vwh"/>
                     </view>
-                    <size key="freeformSize" width="375" height="900"/>
                     <connections>
                         <outlet property="btnSave" destination="fK2-tA-cAT" id="54f-Gg-tTH"/>
                         <outlet property="btnSearchAnimal" destination="pfz-Nw-lOf" id="o52-ha-oeY"/>
@@ -778,7 +774,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsX-gu-qdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2448.8000000000002" y="202.39880059970017"/>
+            <point key="canvasLocation" x="2436" y="54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fN4-2Q-HyI">
@@ -791,12 +787,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="usT-rh-aAv"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iaE-Rk-cYN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ppf-25-Fg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="83"/>
+            <point key="canvasLocation" x="-612" y="90"/>
         </scene>
     </scenes>
     <resources>

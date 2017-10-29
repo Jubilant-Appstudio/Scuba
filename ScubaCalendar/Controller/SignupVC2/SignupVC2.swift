@@ -326,6 +326,13 @@ class SignupVC2: UIViewController {
     // MARK: - Skip
     @IBAction func skipAction(_ sender: Any) {
         
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        
+        guard let homeVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
+            return
+        }
+        
+        CommonMethods.showViewControllerWith(storyboard: "Home", newViewController: homeVC, usingAnimation: .ANIMATELEFT)
     }
     
     override func didReceiveMemoryWarning() {
@@ -342,6 +349,14 @@ extension SignupVC2: APIManagerDelegate {
         if apiIdentifier == "ProfileAction" {
             print(response)
             CommonMethods.hideMBProgressHud()
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            
+            guard let homeVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
+                return
+            }
+            
+            CommonMethods.showViewControllerWith(storyboard: "Home", newViewController: homeVC, usingAnimation: .ANIMATELEFT)
         }
     }
     
