@@ -14,7 +14,9 @@ class SignupVC2: UIViewController {
     // MARK: - Variable Declare
     var isAnimalSearch = false
     var databaseObj: DatabaseManager!
+    var animalModelObj: AnimalModel!
     var arrayAnimal = [AnimalModel]()
+    var arraySelectedAnimal = [Int]()
     
     // MARK: - Outlet Declare
     @IBOutlet weak var lblNavTitle: UILabel!
@@ -36,18 +38,25 @@ class SignupVC2: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        fetchAnimal()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        fetchAnimal()
     }
     
     // MARK: - Back
     func setupUI() {
         
         databaseObj = DatabaseManager()
+        
+        // Register Animal cell
+        let animalNib = UINib(nibName: "AnimalCell", bundle: nil)
+        collectionAnimal.register(animalNib, forCellWithReuseIdentifier: "Animal")
+        
+        collectionAnimal.delegate = self
+        collectionAnimal.dataSource = self
         
         lblNavTitle.font = CommonMethods.SetFont.MontserratBold?.withSize(CGFloat(CommonMethods.SetFontSize.S15))
         
@@ -72,13 +81,19 @@ class SignupVC2: UIViewController {
     // MARK: - Fetch animal from DB
     func fetchAnimal() {
         
-        guard let getAnimal: [AnimalModel] = databaseObj.fetchRecord(tableName: "Animal", whereCondition: "") as? [AnimalModel] else {
-            return
+        let getAnimal = databaseObj.fetchRecord(tableName: "Animal", whereCondition: "")
+        
+        for animalObj in getAnimal {
+            
+            if let getAnimals = animalObj as? NSDictionary {
+                animalModelObj = AnimalModel(fromDictionary: getAnimals)
+                arrayAnimal.append(animalModelObj)
+            }
         }
         
-        arrayAnimal = getAnimal
-        
-        print(arrayAnimal.count)
+        DispatchQueue.main.async(execute: {
+            self.collectionAnimal.reloadData()
+        })
     }
     
     // MARK: - Animal Search
@@ -91,7 +106,8 @@ class SignupVC2: UIViewController {
         } else {
             isAnimalSearch = false
             searchAnimalHeightCN.constant = 0
-            searchAnimal.resignFirstResponder()        }
+            searchAnimal.resignFirstResponder()
+        }
         
     }
     
@@ -139,4 +155,45 @@ extension SignupVC2: APIManagerDelegate {
             CommonMethods.showAlert("", Description: AlertMessages.strErrorAlert as NSString)
         }
     }
+}
+
+// MARK: - API Manager Delegate
+extension SignupVC2: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayAnimal.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let animalCell: AnimalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Animal", for: indexPath) as? AnimalCell else {
+            return UICollectionViewCell()
+        }
+        
+        let animalDataDict = arrayAnimal[indexPath.row]
+        animalCell.updateUI(animalData: animalDataDict)
+        
+        return animalCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let animalCell: AnimalCell = collectionView.cellForItem(at: indexPath) as? AnimalCell {
+            
+            let animalDataDict = arrayAnimal[indexPath.row]
+
+            if arraySelectedAnimal.contains(indexPath.row) {
+                let deselectedAnimals = arraySelectedAnimal.filter { $0 != indexPath.row }
+                arraySelectedAnimal = deselectedAnimals
+                
+                animalDataDict.getIsSelected = false
+            } else {
+                arraySelectedAnimal.append(indexPath.row)
+                animalDataDict.getIsSelected = true
+            }
+            
+            animalCell.updateUI(animalData: animalDataDict)
+        }
+    }
+    
 }

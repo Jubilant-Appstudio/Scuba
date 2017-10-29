@@ -17,11 +17,12 @@ class CommonMethods: NSObject {
         static let MontserratMedium = UIFont(name: "Montserrat-Medium", size: 15.0)
         static let MontserratBold = UIFont(name: "Montserrat-Bold", size: 15.0)
         static let RalewayRegular = UIFont(name: "Raleway-Regular", size: 15.0)
-        
+        static let RalewaySemiBold = UIFont(name: "Raleway-SemiBold", size: 15.0)
     }
     
     struct SetFontSize {
         static let S10 = 10.0
+        static let S12 = 12.0
         static let S15 = 15.0
         static let S17 = 17.0
         static let S20 = 20.0

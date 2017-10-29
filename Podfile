@@ -10,4 +10,5 @@ target 'ScubaCalendar' do
     pod 'FMDB'
     pod 'SkyFloatingLabelTextField', '~> 3.0'
     pod 'SwifterSwift'
+    pod 'Kingfisher', '~> 4.0'
 end

@@ -17,7 +17,8 @@
 		0321763F1F9E5F7A007E1F5B /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321763C1F9E5F79007E1F5B /* Shared.swift */; };
 		032176401F9E5F7A007E1F5B /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321763D1F9E5F7A007E1F5B /* AlertMessages.swift */; };
 		0333775A1FA4FB4800E05DA9 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033377591FA4FB1100E05DA9 /* CountryModel.swift */; };
-		034BDA9A1FA5187000E89DFC /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034BDA991FA5187000E89DFC /* AnimalCell.swift */; };
+		03A2817D1FA5751700CC8359 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2817B1FA5751700CC8359 /* AnimalCell.swift */; };
+		03A2817E1FA5751700CC8359 /* AnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A2817C1FA5751700CC8359 /* AnimalCell.xib */; };
 		03AEBFE21F9FAE650021805B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032176281F9E4F13007E1F5B /* LaunchScreen.storyboard */; };
 		03AEBFE31F9FAE650021805B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032176291F9E4F13007E1F5B /* Main.storyboard */; };
 		03AEBFE71F9FB29A0021805B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AEBFE61F9FB29A0021805B /* LoginVC.swift */; };
@@ -82,7 +83,8 @@
 		0321763C1F9E5F79007E1F5B /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		0321763D1F9E5F7A007E1F5B /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
 		033377591FA4FB1100E05DA9 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
-		034BDA991FA5187000E89DFC /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		03A2817B1FA5751700CC8359 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		03A2817C1FA5751700CC8359 /* AnimalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalCell.xib; sourceTree = "<group>"; };
 		03AEBFE61F9FB29A0021805B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		03AEBFE91FA01DD90021805B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		03BE08F21FA503E200C7D7EA /* ScubaCalendar.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScubaCalendar.sqlite; sourceTree = "<group>"; };
@@ -282,7 +284,8 @@
 		034BDA981FA5184600E89DFC /* AnimalView */ = {
 			isa = PBXGroup;
 			children = (
-				034BDA991FA5187000E89DFC /* AnimalCell.swift */,
+				03A2817B1FA5751700CC8359 /* AnimalCell.swift */,
+				03A2817C1FA5751700CC8359 /* AnimalCell.xib */,
 			);
 			path = AnimalView;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				03BE08F31FA503E500C7D7EA /* ScubaCalendar.sqlite in Resources */,
 				03BFBCD81FA1841F00F59995 /* OFL.txt in Resources */,
 				03BFBCD91FA1841F00F59995 /* Raleway-Black.ttf in Resources */,
+				03A2817E1FA5751700CC8359 /* AnimalCell.xib in Resources */,
 				03BFBCDA1FA1841F00F59995 /* Raleway-BlackItalic.ttf in Resources */,
 				03BFBCDB1FA1841F00F59995 /* Raleway-Bold.ttf in Resources */,
 				03BFBCDC1FA1841F00F59995 /* Raleway-BoldItalic.ttf in Resources */,
@@ -560,6 +564,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ScubaCalendar/Pods-ScubaCalendar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
@@ -569,6 +574,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
@@ -593,12 +599,12 @@
 				0321763F1F9E5F7A007E1F5B /* Shared.swift in Sources */,
 				03F82E991FA4E24500887783 /* SignupVC2.swift in Sources */,
 				032176401F9E5F7A007E1F5B /* AlertMessages.swift in Sources */,
-				034BDA9A1FA5187000E89DFC /* AnimalCell.swift in Sources */,
 				032176391F9E5F52007E1F5B /* APIList.swift in Sources */,
 				0321763A1F9E5F52007E1F5B /* APIManager.swift in Sources */,
 				03AEBFE71F9FB29A0021805B /* LoginVC.swift in Sources */,
 				032176361F9E5F18007E1F5B /* DatabaseManager.swift in Sources */,
 				0321762F1F9E5775007E1F5B /* Splash.swift in Sources */,
+				03A2817D1FA5751700CC8359 /* AnimalCell.swift in Sources */,
 				03AEBFEA1FA01DD90021805B /* UserModel.swift in Sources */,
 				032176141F9E4E38007E1F5B /* AppDelegate.swift in Sources */,
 			);

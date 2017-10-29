@@ -15,9 +15,6 @@
         <array key="Montserrat-Bold.ttf">
             <string>Montserrat-Bold</string>
         </array>
-        <array key="Raleway-SemiBold.ttf">
-            <string>Raleway-SemiBold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Splash-->
@@ -539,68 +536,19 @@
                                                         </constraints>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </searchBar>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="40n-35-uJp">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="40n-35-uJp">
                                                         <rect key="frame" x="5" y="85" width="365" height="100"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="W6O-kb-gUB"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JGn-BH-Xhr">
-                                                            <size key="itemSize" width="50" height="50"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JGn-BH-Xhr">
+                                                            <size key="itemSize" width="70" height="100"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
-                                                        <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Animal" id="FKA-a1-pLw" customClass="AnimalCell" customModule="ScubaCalendar" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Abz-gg-1cP">
-                                                                            <rect key="frame" x="5" y="0.0" width="60" height="60"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="60" id="g56-Je-cN3"/>
-                                                                                <constraint firstAttribute="height" constant="60" id="qBN-Bc-lYR"/>
-                                                                            </constraints>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                    <real key="value" value="30"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                    <real key="value" value="1"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shark" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gf-wI-Yzq">
-                                                                            <rect key="frame" x="0.0" y="81" width="70" height="14"/>
-                                                                            <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="12"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </view>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="4Gf-wI-Yzq" secondAttribute="trailing" id="3Jh-Ye-A0j"/>
-                                                                    <constraint firstItem="4Gf-wI-Yzq" firstAttribute="leading" secondItem="FKA-a1-pLw" secondAttribute="leading" id="4oL-jJ-kCE"/>
-                                                                    <constraint firstItem="Abz-gg-1cP" firstAttribute="top" secondItem="FKA-a1-pLw" secondAttribute="top" id="GTN-tc-OoE"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="4Gf-wI-Yzq" secondAttribute="bottom" constant="5" id="Nsh-tk-WB4"/>
-                                                                    <constraint firstItem="Abz-gg-1cP" firstAttribute="centerX" secondItem="FKA-a1-pLw" secondAttribute="centerX" id="XA2-5i-bwf"/>
-                                                                    <constraint firstItem="4Gf-wI-Yzq" firstAttribute="centerX" secondItem="FKA-a1-pLw" secondAttribute="centerX" id="fQ2-4r-3b8"/>
-                                                                </constraints>
-                                                                <size key="customSize" width="70" height="100"/>
-                                                                <connections>
-                                                                    <outlet property="animalIcon" destination="Abz-gg-1cP" id="PVG-Ve-s8p"/>
-                                                                    <outlet property="animalTitle" destination="4Gf-wI-Yzq" id="WkG-xc-6cC"/>
-                                                                </connections>
-                                                            </collectionViewCell>
-                                                        </cells>
+                                                        <cells/>
                                                     </collectionView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.26274509800000001" green="0.61176470589999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>

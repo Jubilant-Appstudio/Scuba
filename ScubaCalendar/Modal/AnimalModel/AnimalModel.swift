@@ -11,17 +11,60 @@ class AnimalModel {
 
     var databaseObj: DatabaseManager!
     
-	var animalBigImg: String!
-	var animalCreatedOn: String!
-	var animalId: Int!
-	var animalImg: String!
-	var animalName: String!
-	var animalSmallImg: String!
-	var animalStatus: Int!
+	private var animalBigImg: String!
+	private var animalCreatedOn: String!
+	private var animalId: Int!
+	private var animalImg: String!
+	private var animalName: String!
+	private var animalSmallImg: String!
+	private var animalStatus: Int!
 
-	/**
-	 * Instantiate the instance using the passed dictionary values to set the properties values
-	 */
+    private var animalSelected: Bool!
+    
+    // Getter
+    var animalBigImage: String {
+        return animalBigImg
+    }
+    
+    var getAnimalCreatedOn: String {
+        return animalCreatedOn
+    }
+   
+    var getAnimalID: Int {
+        return animalId
+    }
+   
+    var getAnimalImg: String {
+        return animalImg
+    }
+   
+    var getAnimalName: String {
+        return animalName
+    }
+   
+    var getAnimlaSmallImg: String {
+        return animalSmallImg
+    }
+   
+    var getBigImage: Int {
+        return animalStatus
+    }
+    /*
+    var getIsSelected: Bool {
+        return animalSelected
+    }
+    */
+    
+    public var getIsSelected: Bool {
+        get {
+            return animalSelected
+        }
+        set(selectedStatus) {
+            animalSelected = selectedStatus
+        }
+    }
+    
+    
 	init(fromDictionary dictionary: NSDictionary) {
 		animalBigImg = dictionary["animal_big_img"] as? String ?? ""
 		animalCreatedOn = dictionary["animal_created_on"] as? String ?? ""
@@ -30,8 +73,7 @@ class AnimalModel {
 		animalName = dictionary["animal_name"] as? String ?? ""
 		animalSmallImg = dictionary["animal_small_img"] as? String ?? ""
 		animalStatus = dictionary["animal_status"] as? Int ?? 0
-        
-        insertAnimalRecord(dataDict: dictionary)
+        animalSelected = false
 	}
 
     func insertAnimalRecord(dataDict: NSDictionary) {

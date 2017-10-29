@@ -28,7 +28,6 @@ class CountryModel {
 		countryMapSmall = dictionary["country_map_small"] as? String ?? ""
 		countryName = dictionary["country_name"] as? String ?? ""
         
-        insertCountryRecord(dataDict: dictionary)
 	}
 
     func insertCountryRecord(dataDict: NSDictionary) {
