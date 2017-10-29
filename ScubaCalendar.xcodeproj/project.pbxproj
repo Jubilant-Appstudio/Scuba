@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03069F9B1FA62F9400297FEC /* ScubaTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03069F9A1FA62F9400297FEC /* ScubaTabbar.swift */; };
 		032176141F9E4E38007E1F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032176131F9E4E38007E1F5B /* AppDelegate.swift */; };
 		0321761B1F9E4E38007E1F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0321761A1F9E4E38007E1F5B /* Assets.xcassets */; };
 		0321762F1F9E5775007E1F5B /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0321762C1F9E4F13007E1F5B /* Splash.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03069F9A1FA62F9400297FEC /* ScubaTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScubaTabbar.swift; sourceTree = "<group>"; };
 		032176101F9E4E38007E1F5B /* ScubaCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScubaCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		032176131F9E4E38007E1F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0321761A1F9E4E38007E1F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 		03D509511FA5EB43003F57B1 /* TabbarVC */ = {
 			isa = PBXGroup;
 			children = (
+				03069F9A1FA62F9400297FEC /* ScubaTabbar.swift */,
 			);
 			path = TabbarVC;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				032176391F9E5F52007E1F5B /* APIList.swift in Sources */,
 				0321763A1F9E5F52007E1F5B /* APIManager.swift in Sources */,
 				03AEBFE71F9FB29A0021805B /* LoginVC.swift in Sources */,
+				03069F9B1FA62F9400297FEC /* ScubaTabbar.swift in Sources */,
 				032176361F9E5F18007E1F5B /* DatabaseManager.swift in Sources */,
 				0321762F1F9E5775007E1F5B /* Splash.swift in Sources */,
 				03A2817D1FA5751700CC8359 /* AnimalCell.swift in Sources */,

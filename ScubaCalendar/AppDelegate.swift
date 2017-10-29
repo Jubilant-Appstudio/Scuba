@@ -13,10 +13,13 @@ import IQKeyboardManagerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var isUserLogin = false
+    var isUserLogin = true
     
     // swiftlint:disable line_length
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let tabBar = UITabBar.appearance()
+        tabBar.backgroundImage = UIImage()
         
         //keyboard apperance
         UITextField.appearance().keyboardAppearance = .dark
@@ -50,7 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
             
             appdelegate.window?.rootViewController = mainStoryboard.instantiateInitialViewController()
-            
         }
         
         return true
